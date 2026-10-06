@@ -7,7 +7,6 @@ PyJWT~=2.10.1
 cryptography>=42.0.0
 redis~=7.1.0
 httpx>=0.24,<1
-pydantic>=1.10,<2
 
 # test-only
 pytest>=8,<9
