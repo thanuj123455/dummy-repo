@@ -21,7 +21,9 @@ def _error(exc: Exception) -> dict:
 )
 async def create_task(
     github_token: SecretStr = Field(
-        ..., description="GitHub personal access token", json_schema_extra={"format": "password", "ui_type": "password"}
+        ...,
+        description="GitHub personal access token",
+        json_schema_extra={"format": "password", "ui_type": "password"},
     ),
     repository_url: str = Field(..., description="Repository as 'owner/repo' or a full GitHub URL"),
     branch: Optional[str] = Field(None, description="Branch whose file tree is extracted (optional)"),
@@ -52,7 +54,9 @@ async def create_task(
 )
 async def list_tasks(
     github_token: SecretStr = Field(
-        ..., description="GitHub personal access token", json_schema_extra={"format": "password", "ui_type": "password"}
+        ...,
+        description="GitHub personal access token",
+        json_schema_extra={"format": "password", "ui_type": "password"},
     ),
     repository_url: str = Field(..., description="Repository as 'owner/repo' or a full GitHub URL"),
     branch: Optional[str] = Field(None, description="Branch whose file tree is extracted (optional)"),
@@ -79,7 +83,9 @@ async def list_tasks(
 )
 async def complete_task(
     github_token: SecretStr = Field(
-        ..., description="GitHub personal access token", json_schema_extra={"format": "password", "ui_type": "password"}
+        ...,
+        description="GitHub personal access token",
+        json_schema_extra={"format": "password", "ui_type": "password"},
     ),
     repository_url: str = Field(..., description="Repository as 'owner/repo' or a full GitHub URL"),
     branch: Optional[str] = Field(None, description="Branch whose file tree is extracted (optional)"),
